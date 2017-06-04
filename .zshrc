@@ -19,6 +19,8 @@ zplug "themes/arrow", from:oh-my-zsh, as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "plugins/common-aliases", from:oh-my-zsh, as:plugin
+zplug "plugins/colored-man-pages", from:oh-my-zsh, as:plugin
+zplug "lib/completion", from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
