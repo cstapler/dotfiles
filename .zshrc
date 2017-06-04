@@ -43,5 +43,8 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # Then, source plugins and add commands to $PATH
- zplug load --verbose
+zplug load --verbose
+
+# Export Enviroment Variables
+source $HOME/.shell/exports.sh
 
