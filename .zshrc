@@ -48,3 +48,6 @@ zplug load --verbose
 # Export Enviroment Variables
 source $HOME/.shell/exports.sh
 
+#Add alias for porting dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
