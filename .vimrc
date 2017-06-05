@@ -26,6 +26,8 @@ Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plug 'tpope/vim-sensible'
 
+Plug 'vim-syntastic/syntastic'
+
 Plug 'tpope/vim-surround'
 
 call plug#end()
