@@ -1,6 +1,7 @@
 syntax on
 filetype plugin indent on
 set number
+set nocompatible
 
 " Config for vim-plug
 " https://github.com/junegunn/vim-plug
@@ -20,6 +21,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'WolfgangMehner/bash-support'
 Plug 'junegunn/vim-easy-align'
+
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plug 'tpope/vim-sensible'
 
