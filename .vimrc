@@ -67,6 +67,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" Configure jedi
+let g:jedi#use_splits_not_buffers = "top"
+
 " Python shiftwidth, tabstop, softtabstop
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
