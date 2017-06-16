@@ -36,6 +36,10 @@ Plug 'junegunn/vim-easy-align'
 
 Plug 'tpope/vim-sensible'
 
+Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-fugitive'
+
 Plug 'vim-syntastic/syntastic'
 
 Plug 'honza/vim-snippets'
@@ -48,7 +52,6 @@ Plug 'ervandew/supertab'
 
 Plug 'davidhalter/jedi-vim'
 
-Plug 'tpope/vim-surround'
 
 call plug#end()
 
