@@ -13,7 +13,7 @@ ZPLUG_CACHE_DIR="$HOME/.cache/zplug"
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
 # Theme
-zplug "themes/arrow", from:oh-my-zsh, as:theme
+zplug "themes/refined", from:oh-my-zsh, as:theme
 
 # Plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2

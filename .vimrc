@@ -1,9 +1,14 @@
-syntax on
-filetype plugin indent on
+syntax enable
+filetype indent plugin on
 set number
+set list
 set nocompatible
-set clipboard=unnamed
 set laststatus=2
+
+set tabstop=8
+set expandtab
+set shiftwidth=4
+set softtabstop=4
 
 " Change mapleader key to easier key
 let mapleader = ","
@@ -29,6 +34,9 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'WolfgangMehner/bash-support'
 
@@ -55,12 +63,15 @@ Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
+set background=dark
+
+
 " Syntastic recommended settings
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
-"let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint']
 
 " Open NERDTree with Ctrl-n
 map <F4> :NERDTreeToggle<CR>
