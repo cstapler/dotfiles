@@ -58,6 +58,8 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'ervandew/supertab'
 
+Plug 'pangloss/vim-javascript'
+
 Plug 'davidhalter/jedi-vim'
 
 
