@@ -5,9 +5,6 @@ if [[ ! -d ~/.zplug ]];then
 	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
-gpgconf --launch gpg-agent
 
 source ~/.zplug/init.zsh 
 
