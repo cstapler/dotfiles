@@ -1,9 +1,24 @@
-
-
 # Load Zplug, clone if not found
 if [[ ! -d ~/.zplug ]];then
 	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
+
+
+# Start gpg-agent if it's not running
+if ! pidof gpg-agent > /dev/null; then
+    gpg-agent --homedir $HOME/.gnupg --daemon --sh --enable-ssh-support > $HOME/.gnupg/env
+fi
+if [ -f "$HOME/.gnupg/env" ]; then
+    source $HOME/.gnupg/env
+fi
+gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
+
+
+#NVM Support After script install
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 
 source ~/.zplug/init.zsh 
@@ -14,7 +29,7 @@ ZPLUG_CACHE_DIR="$HOME/.cache/zplug"
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
 # Theme
-zplug "themes/refined", from:oh-my-zsh, as:theme
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 # Plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -46,9 +61,11 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
+# Spaceship theme configuration
+SPACESHIP_VI_MODE_SHOW=false
+
 # Export Enviroment Variables
 source $HOME/.shell/exports.sh
 
 #Add alias for porting dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-

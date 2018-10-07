@@ -5,6 +5,9 @@ set list
 set nocompatible
 set laststatus=2
 
+set exrc
+set secure
+
 set tabstop=8
 set expandtab
 set shiftwidth=4
