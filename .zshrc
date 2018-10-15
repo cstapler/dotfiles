@@ -67,5 +67,7 @@ SPACESHIP_VI_MODE_SHOW=false
 # Export Enviroment Variables
 source $HOME/.shell/exports.sh
 
+source $HOME/.shell/aliases.sh
+
 #Add alias for porting dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
